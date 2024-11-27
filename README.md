@@ -15,7 +15,8 @@ Für die Implementierung der Minimax Funktion werden zusätzlich einige Methoden
 
 3. werIstDran(board): String 'x' oder 'o'
    ##### Die Methode nimmt ein Board und zählt die Kreuze und Kreise durch. Bei gleichvielen Kreisen wie Kreuzen ist Kreuz dran. Wenn es ein Kreuz mehr gibt, ist Kreis dran. Der Rückgabewert ist entweder ein 'x' oder ein 'o'. 
-   #### ![werIstDran](https://github.com/user-attachments/assets/4b5a31d0-5d51-4663-a7ea-0c0fd6e7221c)
+   #### ![werIstDran](https://github.com/user-attachments/assets/10e7520f-0798-4563-93fe-7a656d4eace6)
+
 
 #
 
