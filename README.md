@@ -1,14 +1,34 @@
-# Solve Tic Tac Toe
-#### using Minimax
+# Solve Tic Tac Toe using Minimax
 
-Für die Imlementierung der Minimax Funktion werden einige Methoden benötigt:
+##### Das Spielbrett (board) wird hier als 2D-Liste implementiert mit '_' als Standartwerte gefüllt welche ein leeres 3x3 Feld repräsentiert. Dieses wird fortlaufend während des Spieles verwendet und verändert.
 
- -WIP-
-1. 
-2.
+Für die Implementierung der Minimax Funktion werden zusätzlich einige Methoden benötigt:
+
+1. spielZuende(board): bool
+   ##### Diese Methode nimmt ein board an und prüft dann ob es noch mögliche Züge gibt oder ob ein Spieler gewonnen hat. Jeweils wäre ein Terminal State erreicht und es wird zuruückgegeben ob das Spiel vorbei ist (True) oder nicht (False).
+   ##### ![spielZuende](https://github.com/user-attachments/assets/2c17a129-b233-439b-9038-c35caa968d93)
+#
+
+3. bewerteStellung(board): -1, 0 oder 1
+   ##### Diese Methode ist sehr ähnlich wie die Methode spielZuende(board). Der Unterschied ist nur das hier der konkrete Gewinner ermittelt wird. Als Rückgabewert erhält man eine -1 (Kreis gewinnt), 0 (Unentschieden) oder eine 1 (Kreuz gewinnt).  
+#
+
+4. werIstDran(board): String 'x' oder 'o'
+   ##### ![werIstDran drawio](https://github.com/user-attachments/assets/10814c2a-c926-438b-8fa4-af4b153a31c2)
+#
+
+5. moeglicheZuege(board): zug[]
+   ##### ![moeglicheZuege](https://github.com/user-attachments/assets/c8b4a946-3d1a-4b6e-8e20-e711cd1518f0)
+
+#
+   
+7. zukunftsBoard(board,zug): board[][]
+   ##### ![zukunftsBoard](https://github.com/user-attachments/assets/cf035b7c-dc12-4e0e-921d-d2385e19f738)
+#
+
 ...
 ###### So sieht der Algorhitmus zur Bestimmung des Besten Zuges in einer Beliebigen Stellung dann folgendermaßen aus:
-// Bild folgt
+// Bild folgt von minimax(board)
 #
 -WIP-
 
