@@ -5,33 +5,37 @@
 Für die Implementierung der Minimax Funktion werden zusätzlich einige Methoden benötigt:
 
 1. spielZuende(board): bool
-   ##### Diese Methode nimmt ein board an und prüft dann ob es noch mögliche Züge gibt oder ob ein Spieler gewonnen hat. Jeweils wäre ein Terminal State erreicht und es wird zuruückgegeben ob das Spiel vorbei ist (True) oder nicht (False).
+   ##### Diese Methode nimmt ein board an und prüft dann ob es noch mögliche Züge gibt oder ob ein Spieler gewonnen hat. In dem Fall wäre ein Terminal State erreicht und es wird zuruückgegeben ob das Spiel vorbei ist (True) oder nicht (False).
    ##### ![spielZuende](https://github.com/user-attachments/assets/2c17a129-b233-439b-9038-c35caa968d93)
 #
 
-3. bewerteStellung(board): -1, 0 oder 1
-   ##### Diese Methode ist sehr ähnlich wie die Methode spielZuende(board). Der Unterschied ist nur das hier der konkrete Gewinner ermittelt wird. Als Rückgabewert erhält man eine -1 (Kreis gewinnt), 0 (Unentschieden) oder eine 1 (Kreuz gewinnt).  
+2. bewerteStellung(board): -1, 0 oder 1
+   ##### Diese Methode ist sehr ähnlich wie die Methode spielZuende(board) aufgebaut. Der Unterschied ist nur das hier der konkrete Gewinner ermittelt wird. Hier wird aus diesem Grund auch nicht überprüft ob die Felder belegt sind oder nicht, sondern nur ob die Gewinnbedingungen erfüllt sind. Als Rückgabewert erhält man eine -1 (Kreis gewinnt), 0 (Unentschieden) oder eine 1 (Kreuz gewinnt).  
 #
 
-4. werIstDran(board): String 'x' oder 'o'
-   ##### ![werIstDran drawio](https://github.com/user-attachments/assets/10814c2a-c926-438b-8fa4-af4b153a31c2)
+3. werIstDran(board): String 'x' oder 'o'
+   ##### Die Methode nimmt ein Board und zählt die Kreuze und Kreise durch. Bei gleichvielen Kreisen wie Kreuzen ist Kreuz dran. Wenn es ein Kreuz mehr gibt, ist Kreis dran. Der Rückgabewert ist entweder ein 'x' oder ein 'o'. 
+   #### ![werIstDran](https://github.com/user-attachments/assets/4b5a31d0-5d51-4663-a7ea-0c0fd6e7221c)
+
 #
 
-5. moeglicheZuege(board): zug[]
-   ##### ![moeglicheZuege](https://github.com/user-attachments/assets/c8b4a946-3d1a-4b6e-8e20-e711cd1518f0)
+4. moeglicheZuege(board): zug[]
+   ##### Die Methode geht jedes Feld von board durch und prüft ob es leer ist. In dem Fall wird es einer Liste angefügt welche dann auch der Rückgabewert ist nachdem alle Felder durchgegangen worden sind.
+   #### ![moeglicheZuege](https://github.com/user-attachments/assets/48b9d8e3-201d-4783-9829-0b50ef2bad5c)
+
 
 #
    
-7. zukunftsBoard(board,zug): board[][]
-   ##### ![zukunftsBoard](https://github.com/user-attachments/assets/cf035b7c-dc12-4e0e-921d-d2385e19f738)
+5. zukunftsBoard(board,zug): board[][]
+   ##### Diese Methode nimmt ein board und erweitert diesen um einen Zug. Dafür wird zuerst eine Kopie des aktuellen Spielfeldes angelegt. Die werIstDran(board) Methode wird dann verwendet um den aktuellen Spieler zu ermitteln. Anschließend wird der Zug ausgelesen und gespielt. Die Kopie des Spielfeldes wird dann zurückgegeben.  
+   #### ![zukunftsBoard](https://github.com/user-attachments/assets/cf035b7c-dc12-4e0e-921d-d2385e19f738)
 #
 
-...
-###### So sieht der Algorhitmus zur Bestimmung des Besten Zuges in einer Beliebigen Stellung dann folgendermaßen aus:
-// Bild folgt von minimax(board)
-#
--WIP-
+## minimax(board): -1, 0 oder 1
+##### Der Algorhitmus minimax(board) zur Bestimmung des Besten Zuges in einer beliebigen Stellung dann folgendermaßen aus:
+#### ![minimax](https://github.com/user-attachments/assets/004a8812-d603-41cd-819f-de1e488529d1)
 
+#
 
 ## Fragen:
 #
