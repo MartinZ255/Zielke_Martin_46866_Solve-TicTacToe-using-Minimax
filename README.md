@@ -81,4 +81,6 @@ Für die Implementierung der Minimax Funktion werden zusätzlich einige Methoden
 #
 #
 #
-#
+##### Quellen:
+###### Folienskript aus der Vorlesung AI
+###### Spanning Tree, Minimax: How Computers Play Games, 2023, 5:13-8:42 https://www.youtube.com/watch?v=SLgZhpDsrfc
